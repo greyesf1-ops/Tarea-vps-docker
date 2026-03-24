@@ -1,0 +1,13 @@
+Ticket: INC-2048
+Fecha: 21/03/2026
+Canal: formulario web
+Sistema: Portal ERP
+Prioridad: alta
+Usuario: Carla Mendez
+
+Descripcion:
+Al intentar guardar un pedido, el portal muestra una pantalla con error 500 y no permite continuar.
+El problema afecta ventas desde esta manana.
+
+Accion esperada:
+Revisar el error del portal y escalar a soporte tecnico si aplica.

@@ -1,0 +1,6 @@
+Captura enviada por WhatsApp.
+
+Se mira una pantalla con mensaje de acceso denegado y el usuario dice que "ya no entra".
+No se ve fecha clara, no aparece ticket y no se indica si el problema es password, permisos o MFA.
+
+Favor revisar.

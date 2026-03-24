@@ -1,0 +1,23 @@
+{
+  "name": "support-intake-ai-monorepo",
+  "private": true,
+  "packageManager": "npm@11.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @support/shared && npm run build --workspace @support/webapp",
+    "dev": "concurrently -n api,web -c blue,green \"python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --app-dir apps/api\" \"npm run dev --workspace @support/webapp\"",
+    "dev:api": "python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000 --app-dir apps/api",
+    "dev:web": "npm run dev --workspace @support/webapp",
+    "install:api": "pip install -r apps/api/requirements.txt",
+    "typecheck": "npm run typecheck --workspace @support/shared && npm run typecheck --workspace @support/webapp"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "concurrently": "^9.1.2",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.2"
+  }
+}
